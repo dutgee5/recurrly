@@ -39,7 +39,9 @@ const SubsCard = ({
             <Text numberOfLines={1} ellipsizeMode="tail" className="sub-meta">
               {category?.trim() ||
                 plan?.trim() ||
-                (renewalDate ? formatSubscriptionDateTime(renewalDate) : "Not provided")}
+                (renewalDate
+                  ? formatSubscriptionDateTime(renewalDate)
+                  : "Not provided")}
             </Text>
           </View>
         </View>
