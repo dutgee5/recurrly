@@ -39,7 +39,7 @@ const SubsCard = ({
             <Text numberOfLines={1} ellipsizeMode="tail" className="sub-meta">
               {category?.trim() ||
                 plan?.trim() ||
-                (renewalDate ? formatSubscriptionDateTime(renewalDate) : "")}
+                (renewalDate ? formatSubscriptionDateTime(renewalDate) : "Not provided")}
             </Text>
           </View>
         </View>
@@ -60,7 +60,7 @@ const SubsCard = ({
                   numberOfLines={1}
                   ellipsizeMode="tail"
                 >
-                  {paymentMethod?.trim() ?? "Not provided"}
+                  {paymentMethod?.trim() || "Not provided"}
                 </Text>
               </View>
             </View>
@@ -72,7 +72,7 @@ const SubsCard = ({
                   numberOfLines={1}
                   ellipsizeMode="tail"
                 >
-                  {(category?.trim() || plan?.trim()) ?? "Not provided"}
+                  {category?.trim() || plan?.trim() || "Not provided"}
                 </Text>
               </View>
             </View>
